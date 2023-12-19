@@ -1,8 +1,10 @@
 .container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     height: 74px;
+    width: 100vw;
+    padding: 0px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
