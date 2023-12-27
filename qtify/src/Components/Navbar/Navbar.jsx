@@ -1,21 +1,23 @@
-import React from 'react'
-import style from "../Navbar/Navbar.module.css"
-import Logo from '../Logo/Logo'
-import Search from "../Search/Search"
-import Button from '../Button/Button'
+import React from "react";
+import Logo from "../Logo/Logo";
+import Search from "../Search/Search";
+import Button from "../Button/Button";
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
-const Navbar = ({searchData}) => {
-  return (
-    <nav className={style.container}>
-      <a href="/">
-        <Logo/>
-      </a>
-
-      <Search placeholder={"Search a album of your choice"} searchData/>
-
-      <Button>Give Feedback</Button>
-    </nav>
-  )
+function Navbar({ searchData }) {
+    return (
+        <nav className={styles.navbar}>
+            <Link to="/">
+                <Logo/>
+            </Link>
+            <Search
+                placeholder={"Search a song of your choice"}
+                searchData={searchData}
+            />
+            <Button>Give Feedback</Button>
+        </nav>
+    )
 }
 
-export default Navbar
+export default Navbar;

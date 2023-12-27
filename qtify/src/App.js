@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./Components/Hero/Hero";
-import Navbar from "./Components/Navbar/Navbar"
+import Navbar from "./components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from "./api/api";
 import { StyledEngineProvider } from "@mui/material";

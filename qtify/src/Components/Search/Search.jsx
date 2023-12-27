@@ -1,15 +1,19 @@
-import React from 'react'
-import style from "./Search.module.css"
+import React from "react";
+import styles from "./Search.module.css";
+import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
 
-const Search = ({placeholder,searchData}) => {
-  return (
-    <div className={style.wrapper}>
-      <input type="text" placeholder={placeholder} className={style.search}/>
-      <button className={style.btn}>
-        <img src={require('../../assets/Search icon.png')} alt="svg" />
-      </button>
-    </div>
-  )
+function Search({ placeholder }) {
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
+    return (
+        <form className={styles.wrapper} onSubmit={onSubmit}>
+            <input className={styles.search} placeholder={placeholder} required />
+            <button className={styles.searchButton} type="submit">
+                <SearchIcon/>
+            </button>
+        </form>
+    )
 }
 
 export default Search;
