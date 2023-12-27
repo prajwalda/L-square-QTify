@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./HomePage.module.css";
 import { useOutletContext } from "react-router-dom";
-import Hero from "../../components/Hero/Hero";
-import Section from "../../components/Section/Section";
+import Hero from "../../Components/Hero/Hero";
+import Section from "../../Components/Section/Section";
 import {fetchFilters} from "../../api/api";
 
 
