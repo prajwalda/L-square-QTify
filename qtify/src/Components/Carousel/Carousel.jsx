@@ -1,7 +1,9 @@
+// import Swiper core and required modules
 import React, { useEffect } from 'react';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import styles from "./Carousel.module.css";
+// Import Swiper styles
 import 'swiper/css';
 import CarouselLeftNavigation from './CarouselLeftNavigation/CarouselLeftNavigation';
 import CarouselRightNavigation from './CarouselRightNavigation/CarouselRightNavigation';
@@ -23,7 +25,7 @@ function Carousel({data, renderComponent}) {
             initialSlide={0}
             modules={[Navigation]}
             spaceBetween={40}
-            slidesPerView={7.3}
+            slidesPerView={"auto"}
             allowTouchMove
         >
             <Controls data={data} />
